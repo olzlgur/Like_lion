@@ -1,13 +1,5 @@
-def check_and_clear(box):
-    print("불량품이 있으면 box를 clear합니다.")
-    if "불량품" in box.keys() :
-        box.clear()
-box1 = {"불량품" : 10}
-check_and_clear(box1)
+products = {"풀":800, "딱풀":1200, "색종이":1000,"색연필":5000,"스케치북":3500}
 
-print(box1)
+catalog = {"겨울용 실내화":12000, "잠자리채":8000, "딱풀":1400}
 
-box2 = {"정상품": 10}
-check_and_clear(box2)
-
-print(box2)
+products.update(catalog)
