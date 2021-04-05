@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #f9f9f9;
+    --menu-color: #ffffff;
+    --hover-color: #cc0000;
+    --primary-text-color: #101010;
+    --secondary-text-color: #606060;
+    --border-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #161625;
+    --menu-color: #212121;
+    --hover-color: #3d3d3d;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #888;
+    --border-color: #888;
+  }
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-wrapper {
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  background-color: var(--menu-color);
+  padding: 0 8px;
+}
+
+.nav-left .nav-right {
+  height: 100%;
+  align-items: center;
+}
+
+.nav-left .menu {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.logo-wrapper {
+  align-items: center;
+}
+
+.logo-wrapper .logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+}
+
+.logo-wrapper div {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-text-color);
+}
+
+.nav-right {
+  align-items: center;
+}
+.nav-right .switch {
+  width: 32px;
+  height: 32px;
+}
+
+.player-wrapper .player {
+  width: 100vw;
+  height: calc( ( 9 / 16) * 100vw );
+}
+
+.info_wrapper {
+  padding: 0 24px;
+}
+
+.info-wrapper .title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--primary-text-color);
+}
+
+.info-wrapper .desc {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.theme-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 40px;
+}
+
+.theme-switch .switch {
+  width: 32px;
+  height: 32px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
