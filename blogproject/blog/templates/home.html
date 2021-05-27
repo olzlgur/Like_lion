@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <style>
+        body{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Blog Page</h1>
+    <img src="{% static 'tmm.png' %}" width="50" height="50">
+    <div>
+        <a href="{%url 'new' %}">Write Blog</a>
+    </div>
+    <br>
+    {% for blog in blogs %}
+        <h3>{{ blog.title }}</h3>
+        {{ blog.writer }}
+        {{ blog.pub_date }}
+        <img src={{ blog.image.url }}>
+        {{ blog.summary }}
+        <a href="{% url 'detail' blog.id %}">more</a>
+    {% endfor %}
+</body>
+</html>
